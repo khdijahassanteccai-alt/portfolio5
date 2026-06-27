@@ -1,0 +1,50 @@
+name: doctor
+description: Doctor - تطبيق إدارة العيادة الطبية
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  sqflite: ^2.3.2
+  sqflite_common_ffi: ^2.3.4
+  path: ^1.9.0
+  shared_preferences: ^2.2.3
+  intl: 0.20.2
+  google_fonts: ^6.2.1
+  cupertino_icons: ^1.0.6
+  # PDF generation & sharing
+  pdf: ^3.11.0
+  printing: ^5.13.1
+  share_plus: ^10.0.2
+  path_provider: ^2.1.4
+  # Local notifications
+  flutter_local_notifications: ^17.2.2
+  timezone: ^0.9.4
+  # Charts
+  fl_chart: ^0.69.0
+  # Permissions
+  permission_handler: ^11.3.1
+  # URL launching (WhatsApp, links)
+  url_launcher: ^6.3.0
+  # Excel export
+  excel: ^4.0.6
+  # Image picking: file_picker for all platforms (v2 embedding, no AGP 8.13 conflict)
+  file_picker: ^8.1.2
+  # Signature pad for drawing doctor signature
+  signature: ^5.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+
+flutter:
+  uses-material-design: true
