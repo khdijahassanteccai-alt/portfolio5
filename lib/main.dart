@@ -10,16 +10,16 @@ import 'services/theme_service.dart';
 import 'utils/app_theme.dart';
 import 'screens/login_screen.dart';
 import 'screens/dashboard_screen.dart';
+import 'package:flutter/foundation.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   // sqflite doesn't work on desktop without the FFI implementation
-  if (Platform.isWindows || Platform.isLinux) {
-    sqfliteFfiInit();
-    databaseFactory = databaseFactoryFfi;
-  }
-
+ if (!kIsWeb && (Platform.isWindows || Platform.isLinux)) {
+  sqfliteFfiInit();
+  databaseFactory = databaseFactoryFfi;
+}
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
